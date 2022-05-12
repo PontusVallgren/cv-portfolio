@@ -15,7 +15,7 @@ const Profile: React.FC = () => {
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
-        marginTop: "5rem",
+        marginTop: "10rem",
       }}
     >
       <Avatar alt='avatar' src='' sx={{ width: 56, height: 56 }} />
