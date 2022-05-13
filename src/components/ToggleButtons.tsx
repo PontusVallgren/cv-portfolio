@@ -16,7 +16,7 @@ const ToggleButtons: React.FC<ToggleButtonsProps> = ({
   };
 
   return (
-    <Box sx={{ display: "flex", justifyContent: "center", margin: "1em 0" }}>
+    <Box sx={{ display: "flex", justifyContent: "center", margin: "2.5rem 0" }}>
       <ToggleButtonGroup
         color='primary'
         size='large'

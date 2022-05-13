@@ -74,6 +74,7 @@ const Navbar: React.FC = () => {
           backgroundColor: "hsl(250, 60%, 99%)",
           boxShadow: "0 -1px 4px rgba(0,0,0,.15)",
           borderRadius: "1rem 1rem 0 0",
+          zIndex: "2",
           [theme.breakpoints.up("lg")]: {
             top: "0",
             height: "5rem",

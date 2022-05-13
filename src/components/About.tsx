@@ -6,7 +6,7 @@ const About: React.FC = () => {
     <Box
       sx={{
         textAlign: "center",
-        width: "400px",
+        maxWidth: "400px",
         margin: "0 auto",
         padding: "2em",
       }}
