@@ -18,7 +18,16 @@ const Profile: React.FC = () => {
         marginTop: "10rem",
       }}
     >
-      <Avatar alt='avatar' src='' sx={{ width: 56, height: 56 }} />
+      <Avatar
+        alt='avatar'
+        src='https://i.imgur.com/z5qJY4B.png'
+        sx={{
+          width: 165,
+          height: 165,
+          border: "double .35rem #1976d2",
+          marginBottom: "1rem",
+        }}
+      />
       <Typography variant='h4' component='h1'>
         Pontus Vallgren
       </Typography>
@@ -26,11 +35,18 @@ const Profile: React.FC = () => {
         Junior Developer
       </Typography>
       <Box sx={{ marginTop: "0.5rem" }}>
-        <Link href='https://github.com/PontusVallgren'>
-          <GitHubIcon sx={{ cursor: "pointer", marginRight: "0.25rem" }} />
+        <Link href='https://github.com/PontusVallgren' passHref>
+          <a target='_blank'>
+            <GitHubIcon sx={{ cursor: "pointer", marginRight: "0.25rem" }} />
+          </a>
         </Link>
-        <Link href='https://www.linkedin.com/in/pontus-vallgren-438a3621b/'>
-          <LinkedInIcon sx={{ cursor: "pointer", marginLeft: "0.25rem" }} />
+        <Link
+          href='https://www.linkedin.com/in/pontus-vallgren-438a3621b/'
+          passHref
+        >
+          <a target='_blank'>
+            <LinkedInIcon sx={{ cursor: "pointer", marginLeft: "0.25rem" }} />
+          </a>
         </Link>
       </Box>
     </Box>
