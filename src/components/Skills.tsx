@@ -57,7 +57,7 @@ const Skills: React.FC = () => {
           return (
             <ListItem key={index} sx={{ width: "170px", height: "50px" }}>
               <ListItemIcon>
-                <CheckCircleOutlineIcon />
+                <CheckCircleOutlineIcon color='primary' />
               </ListItemIcon>
               <ListItemText primary={item}></ListItemText>
             </ListItem>
@@ -78,7 +78,7 @@ const Skills: React.FC = () => {
           return (
             <ListItem key={index} sx={{ width: "170px", height: "50px" }}>
               <ListItemIcon>
-                <CheckCircleOutlineIcon />
+                <CheckCircleOutlineIcon color='primary' />
               </ListItemIcon>
               <ListItemText primary={item}></ListItemText>
             </ListItem>

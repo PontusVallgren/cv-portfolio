@@ -10,8 +10,6 @@ import HomeIcon from "@mui/icons-material/Home";
 import PersonIcon from "@mui/icons-material/Person";
 import AssignmentIcon from "@mui/icons-material/Assignment";
 import BusinessCenterIcon from "@mui/icons-material/BusinessCenter";
-import SchoolIcon from "@mui/icons-material/School";
-import SendIcon from "@mui/icons-material/Send";
 
 type MenuItem = {
   location: string;
@@ -20,7 +18,7 @@ type MenuItem = {
 
 const Navbar: React.FC = () => {
   const theme = useTheme();
-  const desktop = useMediaQuery(theme.breakpoints.up("lg"));
+  const desktop = useMediaQuery(theme.breakpoints.up("sm"));
   const [showNavbar, setShowNavbar] = useState(false);
   const menu: MenuItem[] = [
     {
@@ -38,14 +36,6 @@ const Navbar: React.FC = () => {
     {
       location: "Portfolio",
       icon: <BusinessCenterIcon />,
-    },
-    {
-      location: "Qualification",
-      icon: <SchoolIcon />,
-    },
-    {
-      location: "Contact Me",
-      icon: <SendIcon />,
     },
   ];
   useEffect(() => {
@@ -75,7 +65,7 @@ const Navbar: React.FC = () => {
           boxShadow: "0 -1px 4px rgba(0,0,0,.15)",
           borderRadius: "1rem 1rem 0 0",
           zIndex: "2",
-          [theme.breakpoints.up("lg")]: {
+          [theme.breakpoints.up("sm")]: {
             top: "0",
             height: "5rem",
             padding: "2rem",
@@ -139,7 +129,7 @@ const Navbar: React.FC = () => {
               borderRadius: "1rem 1rem 0 0",
               boxShadow: "0 -1px 4px rgba(0,0,0,.15)",
               backgroundColor: "hsl(250, 60%, 99%)",
-              [theme.breakpoints.up("lg")]: {
+              [theme.breakpoints.up("sm")]: {
                 top: "0",
                 position: "relative",
                 height: "100%",
@@ -162,14 +152,14 @@ const Navbar: React.FC = () => {
                     "&:hover": {
                       color: "gray",
                     },
-                    [theme.breakpoints.up("lg")]: {
+                    [theme.breakpoints.up("sm")]: {
                       minWidth: "150px",
                     },
                   }}
                   key={index}
                   item
-                  xs={4}
-                  lg={1}
+                  xs={6}
+                  sm={1}
                 >
                   {!desktop && <Box>{link.icon}</Box>}
                   <Link href='#'>

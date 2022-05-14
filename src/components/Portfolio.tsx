@@ -39,7 +39,7 @@ const Portfolio: React.FC = () => {
                   flexDirection: "column",
                   alignItems: "center",
                   boxShadow: "none",
-                  margin: "0 0 3rem 0",
+                  margin: "0 0 2rem 0",
                   [theme.breakpoints.up("md")]: {
                     flexDirection: "row",
                     justifyContent: "center",
@@ -56,6 +56,7 @@ const Portfolio: React.FC = () => {
                     [theme.breakpoints.up("md")]: {
                       width: "350px",
                       height: "240px",
+                      objectFit: "contain",
                     },
                     [theme.breakpoints.up("lg")]: {
                       width: "600px",
@@ -80,16 +81,29 @@ const Portfolio: React.FC = () => {
                   <Typography variant='subtitle2' sx={{ margin: "0.5rem 0" }}>
                     {item.description}
                   </Typography>
-                  <Button
-                    target='_blank'
-                    href={item.demoURL}
-                    variant='contained'
-                    sx={{
-                      maxWidth: "90px",
-                    }}
-                  >
-                    Demo
-                  </Button>
+                  <Box>
+                    <Button
+                      target='_blank'
+                      href={item.demoURL}
+                      variant='contained'
+                      sx={{
+                        maxWidth: "90px",
+                        marginRight: "1rem",
+                      }}
+                    >
+                      Demo
+                    </Button>
+                    <Button
+                      target='_blank'
+                      href={item.demoURL}
+                      variant='outlined'
+                      sx={{
+                        maxWidth: "90px",
+                      }}
+                    >
+                      Github
+                    </Button>
+                  </Box>
                 </CardContent>
               </Card>
             </SwiperSlide>
