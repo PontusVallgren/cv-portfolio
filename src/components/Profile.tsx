@@ -16,6 +16,10 @@ const Profile: React.FC = () => {
         flexDirection: "column",
         alignItems: "center",
         marginTop: "10rem",
+        [theme.breakpoints.up("md")]: {
+          flexDirection: "row",
+          justifyContent: "center",
+        },
       }}
     >
       <Avatar
@@ -28,26 +32,38 @@ const Profile: React.FC = () => {
           marginBottom: "1rem",
         }}
       />
-      <Typography variant='h4' component='h1'>
-        Pontus Vallgren
-      </Typography>
-      <Typography variant='subtitle2' component='h2'>
-        Junior Developer
-      </Typography>
-      <Box sx={{ marginTop: "0.5rem" }}>
-        <Link href='https://github.com/PontusVallgren' passHref>
-          <a target='_blank'>
-            <GitHubIcon sx={{ cursor: "pointer", marginRight: "0.25rem" }} />
-          </a>
-        </Link>
-        <Link
-          href='https://www.linkedin.com/in/pontus-vallgren-438a3621b/'
-          passHref
-        >
-          <a target='_blank'>
-            <LinkedInIcon sx={{ cursor: "pointer", marginLeft: "0.25rem" }} />
-          </a>
-        </Link>
+      <Box
+        sx={{
+          display: "flex",
+          flexDirection: "column",
+          textAlign: "center",
+          [theme.breakpoints.up("md")]: {
+            alignItems: "flex-start",
+            marginLeft: "2rem",
+          },
+        }}
+      >
+        <Typography variant='h4' component='h1'>
+          Pontus Vallgren
+        </Typography>
+        <Typography variant='subtitle2' component='h2'>
+          Junior Developer
+        </Typography>
+        <Box sx={{ marginTop: "0.5rem" }}>
+          <Link href='https://github.com/PontusVallgren' passHref>
+            <a target='_blank' style={{ marginRight: ".5rem" }}>
+              <GitHubIcon sx={{ cursor: "pointer" }} />
+            </a>
+          </Link>
+          <Link
+            href='https://www.linkedin.com/in/pontus-vallgren-438a3621b/'
+            passHref
+          >
+            <a target='_blank' style={{ marginLeft: ".5rem" }}>
+              <LinkedInIcon sx={{ cursor: "pointer" }} />
+            </a>
+          </Link>
+        </Box>
       </Box>
     </Box>
   );
