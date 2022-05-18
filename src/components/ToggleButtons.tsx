@@ -4,11 +4,13 @@ import { Box, ToggleButton, ToggleButtonGroup } from "@mui/material";
 type ToggleButtonsProps = {
   toggle: (value: string) => void;
   buttonInUse: string;
+  refPortfolio: any;
 };
 
 const ToggleButtons: React.FC<ToggleButtonsProps> = ({
   toggle,
   buttonInUse,
+  refPortfolio,
 }) => {
   const handleToggle = (e: SyntheticEvent) => {
     const { value } = e.target as HTMLInputElement;
@@ -18,14 +20,15 @@ const ToggleButtons: React.FC<ToggleButtonsProps> = ({
   return (
     <Box sx={{ display: "flex", justifyContent: "center", margin: "2.5rem 0" }}>
       <ToggleButtonGroup
+        ref={refPortfolio}
         color='primary'
         size='large'
         value={buttonInUse}
         exclusive
         onChange={handleToggle}
       >
-        <ToggleButton value='portfolio'>Portfolio</ToggleButton>
-        <ToggleButton value='skills'>Skills</ToggleButton>
+        <ToggleButton value='Portfolio'>Portfolio</ToggleButton>
+        <ToggleButton value='Skills'>Skills</ToggleButton>
       </ToggleButtonGroup>
     </Box>
   );

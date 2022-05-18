@@ -52,12 +52,14 @@ const Skills: React.FC = () => {
           flexWrap: "wrap",
         }}
       >
-        <Typography variant='h5'>Frontend developer</Typography>
+        <Typography variant='h5' color='text.primary'>
+          Frontend developer
+        </Typography>
         {frontendSkills.map((item, index) => {
           return (
             <ListItem key={index} sx={{ width: "170px", height: "50px" }}>
               <ListItemIcon>
-                <CheckCircleOutlineIcon color='primary' />
+                <CheckCircleOutlineIcon color='secondary' />
               </ListItemIcon>
               <ListItemText primary={item}></ListItemText>
             </ListItem>
@@ -73,12 +75,14 @@ const Skills: React.FC = () => {
           flexWrap: "wrap",
         }}
       >
-        <Typography variant='h5'>Backend developer</Typography>
+        <Typography variant='h5' color='text.primary'>
+          Backend developer
+        </Typography>
         {backendSkills.map((item, index) => {
           return (
             <ListItem key={index} sx={{ width: "170px", height: "50px" }}>
               <ListItemIcon>
-                <CheckCircleOutlineIcon color='primary' />
+                <CheckCircleOutlineIcon color='secondary' />
               </ListItemIcon>
               <ListItemText primary={item}></ListItemText>
             </ListItem>

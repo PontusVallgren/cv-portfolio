@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import { Box, Avatar, Typography } from "@mui/material";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
@@ -6,16 +6,21 @@ import useMediaQuery from "@mui/material/useMediaQuery";
 import { useTheme } from "@mui/material/styles";
 import Link from "next/link";
 
-const Profile: React.FC = () => {
+type ProfileProps = {
+  refProfile: any;
+};
+
+const Profile: React.FC<ProfileProps> = ({ refProfile }) => {
   const theme = useTheme();
   const matches = useMediaQuery(theme.breakpoints.up("sm"));
   return (
     <Box
+      ref={refProfile}
       sx={{
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
-        marginTop: "10rem",
+        paddingTop: "10rem",
         [theme.breakpoints.up("md")]: {
           flexDirection: "row",
           justifyContent: "center",
@@ -43,16 +48,24 @@ const Profile: React.FC = () => {
           },
         }}
       >
-        <Typography variant='h4' component='h1'>
+        <Typography variant='h4' component='h1' color='text.primary'>
           Pontus Vallgren
         </Typography>
-        <Typography variant='subtitle2' component='h2'>
+        <Typography variant='caption' component='h2' color='text.secondary'>
           Junior Developer
         </Typography>
         <Box sx={{ marginTop: "0.5rem" }}>
           <Link href='https://github.com/PontusVallgren' passHref>
             <a target='_blank' style={{ marginRight: ".5rem" }}>
-              <GitHubIcon sx={{ cursor: "pointer" }} />
+              <GitHubIcon
+                sx={{
+                  cursor: "pointer",
+                  "&:hover": {
+                    color: "secondary.light",
+                  },
+                }}
+                color='secondary'
+              />
             </a>
           </Link>
           <Link
@@ -60,7 +73,15 @@ const Profile: React.FC = () => {
             passHref
           >
             <a target='_blank' style={{ marginLeft: ".5rem" }}>
-              <LinkedInIcon sx={{ cursor: "pointer" }} />
+              <LinkedInIcon
+                sx={{
+                  cursor: "pointer",
+                  "&:hover": {
+                    color: "secondary.light",
+                  },
+                }}
+                color='secondary'
+              />
             </a>
           </Link>
         </Box>

@@ -77,8 +77,10 @@ const Portfolio: React.FC = () => {
                     },
                   }}
                 >
-                  <Typography variant='h5'>{item.name}</Typography>
-                  <Typography variant='subtitle2' sx={{ margin: "0.5rem 0" }}>
+                  <Typography variant='h5' color='text.primary'>
+                    {item.name}
+                  </Typography>
+                  <Typography variant='body2' sx={{ margin: "0.5rem 0" }}>
                     {item.description}
                   </Typography>
                   <Box>
