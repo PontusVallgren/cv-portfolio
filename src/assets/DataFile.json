@@ -1,0 +1,30 @@
+[
+    {
+        "id": "1",
+        "name": "Movie Website",
+        "description": "This is one of my group project in school. It's a movie page where you can browse for your favorite movie, sort them on rating or what you prefer, you can create an account and write a review about the movie of your choice or what the trailer. During the project we used the scrum work methodology using Github project. We build this project with using NextJS, Typescript, MUI, mongoDB.",
+        "demoURL": "disabled",
+        "githubURL": "https://github.com/PontusVallgren/Kino-Cinema",
+        "image": "https://i.imgur.com/l0AF1os.png"
+
+    },
+
+    {
+        "id": "2",
+        "name": "Wordle",
+        "description": "This project is a wordle-copy game built with React and CSS for the GUI. The logic behind the game is written on the backend with help of nodeJS/Express/Typescript and using REST Api to communicate. High score list are rendered with help of SSR and EJS. There are also tests for the game algorithm using JEST. The game is built to avoid the possibility to cheat in the obvious ways.",
+        "demoURL": "disabled",
+        "githubURL": "https://github.com/PontusVallgren/wordle",
+        "image": "https://i.imgur.com/E3Bhna2.png"
+
+
+    },
+    {
+        "id": "3",
+        "name": "Insurance landing page",
+        "description": "This project is a fully responsive landing page for an insurance company. HTML/SASS and JavaScript was used in this project.",
+        "demoURL": "https://pontusvallgren.github.io/Insure-landing-page/",
+        "githubURL": "https://github.com/PontusVallgren/Insure-landing-page",
+        "image": "https://i.imgur.com/wfRedMf.png"
+    }
+]
