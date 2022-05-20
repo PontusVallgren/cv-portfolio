@@ -1,19 +1,28 @@
 import React from "react";
 import { Box, Button, Grid, Typography } from "@mui/material";
 import Card from "@mui/material/Card";
-import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import { useTheme } from "@mui/material/styles";
-import ProjectData from "../assets/projectData.json";
+import DataFile from "../assets/DataFile.json";
 import { Navigation, Pagination, Scrollbar, A11y } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
+type ProjectItem = {
+  id: string;
+  name: string;
+  description: string;
+  demoURL: string;
+  githubURL: string;
+  image: string;
+};
+
 const Portfolio: React.FC = () => {
   const theme = useTheme();
+  const ProjectData: ProjectItem[] = DataFile;
   return (
     <Box>
       <Swiper
@@ -88,6 +97,7 @@ const Portfolio: React.FC = () => {
                       target='_blank'
                       href={item.demoURL}
                       variant='contained'
+                      disabled={item.demoURL === "disabled"}
                       sx={{
                         maxWidth: "90px",
                         marginRight: "1rem",
@@ -97,7 +107,7 @@ const Portfolio: React.FC = () => {
                     </Button>
                     <Button
                       target='_blank'
-                      href={item.demoURL}
+                      href={item.githubURL}
                       variant='outlined'
                       sx={{
                         maxWidth: "90px",
