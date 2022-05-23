@@ -198,24 +198,19 @@ const Navbar: React.FC<NavbarProps> = ({
                     xs={6}
                     sm={1}
                   >
-                    {!desktop && (
-                      <Box
-                        onClick={() => handleScroll(link.ref, link.location!)}
+                    <Box onClick={() => handleScroll(link.ref, link.location!)}>
+                      {!desktop && link.icon}
+                      <Typography
+                        sx={{
+                          color: "text.primary",
+                          "&:hover": {
+                            color: "action.active",
+                          },
+                        }}
                       >
-                        {link.icon}
-                      </Box>
-                    )}
-                    <Typography
-                      onClick={() => handleScroll(link.ref, link.location!)}
-                      sx={{
-                        color: "text.primary",
-                        "&:hover": {
-                          color: "action.active",
-                        },
-                      }}
-                    >
-                      {link.location}
-                    </Typography>
+                        {link.location}
+                      </Typography>
+                    </Box>
                   </Grid>
                 );
               })}
