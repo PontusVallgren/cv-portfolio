@@ -111,7 +111,7 @@ const Navbar: React.FC<NavbarProps> = ({
             marginLeft: "1em",
             color: "text.primary",
             "&:hover": {
-              color: "gray",
+              color: "action.active",
             },
           }}
         >
@@ -187,7 +187,7 @@ const Navbar: React.FC<NavbarProps> = ({
                       justifyContent: "center",
                       color: "text.primary",
                       "&:hover": {
-                        color: "gray",
+                        color: "action.active",
                       },
                       [theme.breakpoints.up("sm")]: {
                         minWidth: "150px",
@@ -207,7 +207,12 @@ const Navbar: React.FC<NavbarProps> = ({
                     )}
                     <Typography
                       onClick={() => handleScroll(link.ref, link.location!)}
-                      color='text.primary'
+                      sx={{
+                        color: "text.primary",
+                        "&:hover": {
+                          color: "action.active",
+                        },
+                      }}
                     >
                       {link.location}
                     </Typography>
