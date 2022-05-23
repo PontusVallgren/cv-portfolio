@@ -43,7 +43,9 @@ const Navbar: React.FC<NavbarProps> = ({
     if (showNavbar && !desktop) {
       setShowNavbar(!showNavbar);
     }
-    toggle(button);
+    if (button == "Skills" || button == "Portfolio") {
+      toggle(button);
+    }
   };
 
   const menu: MenuItem[] = [

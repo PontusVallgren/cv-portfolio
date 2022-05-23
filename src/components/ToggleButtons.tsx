@@ -18,9 +18,11 @@ const ToggleButtons: React.FC<ToggleButtonsProps> = ({
   };
 
   return (
-    <Box sx={{ display: "flex", justifyContent: "center", margin: "2.5rem 0" }}>
+    <Box
+      ref={refPortfolio}
+      sx={{ display: "flex", justifyContent: "center", margin: "2.5rem 0" }}
+    >
       <ToggleButtonGroup
-        ref={refPortfolio}
         color='primary'
         size='large'
         value={buttonInUse}
