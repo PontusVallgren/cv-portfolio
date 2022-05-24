@@ -26,13 +26,8 @@ const Contact: React.FC = () => {
 
   return (
     <Stack direction='row' spacing={1.5} sx={{ justifyContent: "center" }}>
-      <Button
-        size='large'
-        variant='contained'
-        endIcon={<DownloadIcon />}
-        disabled
-      >
-        <a href='/test.pdf' download>
+      <Button size='large' variant='contained' endIcon={<DownloadIcon />}>
+        <a href='/CV-PontusVallgren.pdf' download>
           Download CV
         </a>
       </Button>

@@ -1,8 +1,8 @@
-import React, { useRef } from "react";
+import React, { RefObject, useRef } from "react";
 import { Box, Button, Typography } from "@mui/material";
 
 type AboutProps = {
-  refAbout: any;
+  refAbout: RefObject<HTMLButtonElement>;
 };
 
 const About: React.FC<AboutProps> = ({ refAbout }) => {

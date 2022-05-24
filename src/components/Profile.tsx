@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { RefObject, useRef } from "react";
 import { Box, Avatar, Typography } from "@mui/material";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
@@ -7,7 +7,7 @@ import { useTheme } from "@mui/material/styles";
 import Link from "next/link";
 
 type ProfileProps = {
-  refProfile: any;
+  refProfile: RefObject<HTMLButtonElement>;
 };
 
 const Profile: React.FC<ProfileProps> = ({ refProfile }) => {

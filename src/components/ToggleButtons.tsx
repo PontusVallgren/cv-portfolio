@@ -1,10 +1,10 @@
-import React, { SyntheticEvent } from "react";
+import React, { RefObject, SyntheticEvent } from "react";
 import { Box, ToggleButton, ToggleButtonGroup } from "@mui/material";
 
 type ToggleButtonsProps = {
   toggle: (value: string) => void;
   buttonInUse: string;
-  refPortfolio: any;
+  refPortfolio: RefObject<HTMLButtonElement>;
 };
 
 const ToggleButtons: React.FC<ToggleButtonsProps> = ({

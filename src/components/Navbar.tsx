@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { RefObject, useEffect, useState } from "react";
 import Link from "next/link";
 import { Box, Typography, Grid, Button, Slide } from "@mui/material";
 import GridViewIcon from "@mui/icons-material/GridView";
@@ -12,9 +12,9 @@ import AssignmentIcon from "@mui/icons-material/Assignment";
 import BusinessCenterIcon from "@mui/icons-material/BusinessCenter";
 
 type NavbarProps = {
-  refProfile: any;
-  refAbout: any;
-  refPortfolio: any;
+  refProfile: RefObject<HTMLButtonElement>;
+  refAbout: RefObject<HTMLButtonElement>;
+  refPortfolio: RefObject<HTMLButtonElement>;
   toggle: (value: string) => void;
 };
 

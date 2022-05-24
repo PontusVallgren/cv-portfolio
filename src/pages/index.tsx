@@ -15,9 +15,9 @@ const Home: NextPage = () => {
   const theme = useTheme();
   const [button, setButton] = useState<string>("Portfolio");
   const desktop = useMediaQuery(theme.breakpoints.up("sm"));
-  const refProfile = useRef(null);
-  const refAbout = useRef(null);
-  const refPortfolio = useRef(null);
+  const refProfile = useRef<HTMLButtonElement>(null);
+  const refAbout = useRef<HTMLButtonElement>(null);
+  const refPortfolio = useRef<HTMLButtonElement>(null);
 
   const handleChange = (value: string) => {
     setButton(value);
