@@ -27,7 +27,7 @@ const Contact: React.FC = () => {
   return (
     <Stack direction='row' spacing={1.5} sx={{ justifyContent: "center" }}>
       <Button size='large' variant='contained' endIcon={<DownloadIcon />}>
-        <a href='/CV-PontusVallgren.pdf' download>
+        <a href='/Pontus-Vallgren-CV.pdf' download>
           Download CV
         </a>
       </Button>

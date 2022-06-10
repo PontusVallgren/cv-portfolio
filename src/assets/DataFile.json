@@ -2,7 +2,7 @@
     {
         "id": "1",
         "name": "Movie Website",
-        "description": "This is one of my group project in school. It's a movie page where you can browse for your favorite movie, sort them on rating or what you prefer, you can create an account and write a review about the movie of your choice or what the trailer. During the project we used the scrum work methodology using Github project. We build this project with using NextJS, Typescript, MUI, mongoDB.",
+        "description": "This is one of my group project in school. It's a movie page where you can browse for your favorite movie, sort them on rating or what you prefer, you can create an account and write a review about the movie of your choice or watch the trailer. During the project we used the scrum work methodology using Github project. We build this project with using NextJS, Typescript, MUI, mongoDB.",
         "demoURL": "disabled",
         "githubURL": "https://github.com/PontusVallgren/Kino-Cinema",
         "image": "https://i.imgur.com/l0AF1os.png"
